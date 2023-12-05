@@ -10,7 +10,7 @@ User.init (
             type: DataTypes.INTEGER,
             allowNull: false,
             autoIncrement: true,
-            primaryKey: true
+            primaryKey: true,
         },
         username: {
             type:DataTypes.STRING,
