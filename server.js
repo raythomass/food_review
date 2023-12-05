@@ -4,6 +4,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const { helpers } = require('./utils/helper');
+const routes = require('./controllers')
 
 // Starting express.js and defining PORT and handlebars
 const app = express();
@@ -29,6 +30,7 @@ app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(routes);
 
 // App starts to listen on the given PORT
 app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
