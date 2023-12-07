@@ -7,20 +7,20 @@ const userData = [
         password: 'raypassword1',
     },
     {
-        username: 'raymond2',
-        password: 'raypassword2', 
+        username: 'edwin2',
+        password: 'edwinpass', 
     },
     {
-        username: 'raymond3',
-        password: 'raypassword3',
+        username: 'dib3',
+        password: 'dibpass',
     },
     {
-        username: 'raymond4',
-        password: 'raypassword4',
+        username: 'ray5',
+        password: 'rayspass5',
     },
     {
-        username: 'raymond5',
-        password: 'raypassword5',
+        username: 'dibuser6',
+        password: 'dibpassword6',
     },
 ];
 
