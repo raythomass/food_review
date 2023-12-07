@@ -1,12 +1,14 @@
-<h1>All Reviews</h1>
+<h1 class="arev">All Reviews</h1>
 
 {{#each reviews as |review|}}
 
-<section>
-    <h3>{{review.title}}</h3>
-    <p>{{review.content}}</p>
-</section>
-
-
+<div class="card">
+    <section>
+        <h3 class="rtitle">{{review.title}}</h3>
+    </section>
+    <section>
+        <p class="rcontent">{{review.content}}</p>
+    </section>
+</div>
 
 {{/each}}
