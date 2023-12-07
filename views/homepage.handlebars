@@ -1,1 +1,12 @@
-<h1>HOMEPAGE</h1>
+<h1>All Reviews</h1>
+
+{{#each reviews as |review|}}
+
+<section>
+    <h3>{{review.title}}</h3>
+    <p>{{review.content}}</p>
+</section>
+
+
+
+{{/each}}

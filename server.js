@@ -1,4 +1,5 @@
 // Requirements
+const sequelize = require('./config/connection');
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -8,7 +9,7 @@ const routes = require('./controllers')
 
 // Starting express.js and defining PORT and handlebars
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 // Creates a const for a session
 const sess = {
@@ -33,6 +34,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // App starts to listen on the given PORT
-app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
+  });
 
 
